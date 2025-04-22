@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MagnusEXC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="relative bg-black text-gold font-sans leading-relaxed overflow-x-hidden">
+
+<!-- Custom Cursor -->
+<div class="custom-cursor" id="cursor"></div>
+
+<!-- Loader (Intro) -->
+<div id="loader" class="fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black z-[9999]">
+  <div id="logoContainer" class="flex flex-col items-center opacity-0">
+    <div id="logoSymbol" class="w-16 h-16 rounded-full border-4 border-gold mb-6"></div>
+    <h1 id="brandName" class="text-6xl md:text-8xl font-serif text-gold opacity-0">MagnusEXC</h1>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="fixed w-full flex justify-between items-center px-8 py-6 z-50 backdrop-blur-md bg-black/30">
+  <div class="text-2xl font-serif tracking-widest">MagnusEXC</div>
+  <nav class="space-x-6 hidden md:flex">
+    <a href="#shop" class="hover:text-white transition">Shop</a>
+    <a href="#about" class="hover:text-white transition">Über Uns</a>
+  </nav>
+  <button id="contactBtn" class="border border-gold text-gold px-4 py-2 rounded-full hover:bg-gold hover:text-black transition">Kontakt</button>
+</header>
+
+<!-- Hero Section -->
+<section class="h-screen flex flex-col justify-center items-center text-center px-8">
+  <h1 class="text-6xl md:text-8xl font-serif mb-6 animate-hero">Erlebe Exklusivität</h1>
+  <p class="text-xl max-w-xl animate-hero">MagnusEXC – Dein einzigartiger Luxusshop.</p>
+  <button class="mt-10 px-8 py-4 border border-gold rounded-full hover:bg-gold hover:text-black transition">Jetzt Entdecken</button>
+
+  <!-- Scroll Down Arrow -->
+  <div class="absolute bottom-10 flex justify-center w-full">
+    <button onclick="scrollToSection()" class="animate-bounce">
+      <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+  </div>
+</section>
+
+<!-- Shop Section -->
+<section id="shop" class="min-h-screen py-32 space-y-16">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-8">
+    <!-- Produktcards -->
+    <div class="bg-black/50 backdrop-blur-md rounded-lg p-8 flex flex-col items-center text-center hover:scale-105 transform transition">
+      <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" alt="Produkt" class="mb-4 rounded-lg">
+      <h2 class="text-2xl font-semibold mb-2">Rolex Submariner</h2>
+      <p class="mb-4">Exquisite Qualität, ultimative Eleganz.</p>
+      <button class="px-6 py-3 border border-gold rounded-full hover:bg-gold hover:text-black transition">Jetzt Kaufen</button>
+    </div>
+    <!-- weitere Produkte... -->
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="min-h-screen flex items-center justify-center px-8">
+  <div class="max-w-3xl text-center space-y-8">
+    <h2 class="text-4xl font-serif animate-about">Unsere Mission</h2>
+    <p class="text-lg animate-about">Wir schaffen nicht nur Produkte – wir schaffen Erlebnisse für die Ewigkeit.</p>
+  </div>
+</section>
+
+<!-- Kontakt Popup -->
+<div id="contactForm" class="fixed bottom-20 right-6 bg-black/80 p-8 rounded-lg hidden">
+  <form class="flex flex-col space-y-4">
+    <input type="text" placeholder="Name" class="bg-transparent border-b border-gold focus:outline-none text-gold">
+    <input type="email" placeholder="E-Mail" class="bg-transparent border-b border-gold focus:outline-none text-gold">
+    <textarea placeholder="Deine Nachricht" class="bg-transparent border-b border-gold focus:outline-none text-gold"></textarea>
+    <button type="submit" class="border border-gold px-4 py-2 rounded-full hover:bg-gold hover:text-black transition">Absenden</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
