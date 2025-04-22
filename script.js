@@ -1,40 +1,54 @@
-window.addEventListener('load', () => {
-  const logoContainer = document.getElementById('logoContainer');
-  const logoSymbol = document.getElementById('logoSymbol');
-  const brandName = document.getElementById('brandName');
-  const loader = document.getElementById('loader');
-
-  gsap.timeline()
-    .to(logoContainer, {opacity: 1, duration: 0.8, ease: "power2.out"})
-    .from(logoSymbol, {scale: 0, duration: 1, ease: "back.out(1.7)"}, "-=0.5")
-    .to(brandName, {opacity: 1, y: -20, duration: 1, ease: "power2.out"}, "-=0.5")
-    .to(logoContainer, {opacity: 0, duration: 1, delay: 0.8, ease: "power2.inOut"})
-    .to(loader, {opacity: 0, duration: 1, ease: "power2.inOut", onComplete: () => loader.style.display = "none"});
-});
-
-// Smooth Scrolling
-const lenis = new Lenis()
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-requestAnimationFrame(raf)
-
-// Custom Cursor
+// Custom Cursor Bewegung
 const cursor = document.getElementById('cursor');
+
 document.addEventListener('mousemove', e => {
   cursor.style.top = `${e.clientY}px`;
   cursor.style.left = `${e.clientX}px`;
 });
 
-// Scroll Down Button
-function scrollToSection() {
-  document.getElementById('shop').scrollIntoView({behavior: "smooth"});
-}
+// GSAP Load-Animationen
+gsap.registerPlugin(ScrollTrigger);
 
-// Contact Form Toggle
-const contactBtn = document.getElementById('contactBtn');
-const contactForm = document.getElementById('contactForm');
-contactBtn.addEventListener('click', () => {
-  contactForm.classList.toggle('hidden');
+// Hero Text Cinematic Auftritt
+gsap.to(".hero-text", {opacity: 1, y: -20, duration: 1.5, ease: "power3.out"});
+gsap.to(".hero-subtext", {opacity: 1, y: -10, duration: 1.5, ease: "power3.out", delay: 0.3});
+
+// Produkte beim Scrollen einblenden
+gsap.utils.toArray('.product-card').forEach(card => {
+  gsap.from(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    ease: "power2.out"
+  });
+});
+
+// Zitat und About Sektionen einblenden
+gsap.from(".quote-section", {
+  scrollTrigger: {
+    trigger: ".quote-section",
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  ease: "power2.out"
+});
+
+gsap.from(".about-section", {
+  scrollTrigger: {
+    trigger: ".about-section",
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  ease: "power2.out"
 });
