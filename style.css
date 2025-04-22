@@ -9,3 +9,10 @@
   transition: all 0.15s ease;
   z-index: 1000;
 }
+
+/* Neue Klasse für dein entspanntes Weiß */
+.text-softwhite {
+  color: #f0f0f0;
+}
+
+
