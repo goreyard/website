@@ -1,3 +1,4 @@
+/* Custom Cursor */
 .custom-cursor {
   width: 20px;
   height: 20px;
@@ -6,13 +7,37 @@
   position: fixed;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: all 0.15s ease;
-  z-index: 1000;
+  transition: transform 0.15s ease, opacity 0.25s ease;
+  z-index: 9999;
 }
 
-/* Neue Klasse für dein entspanntes Weiß */
-.text-softwhite {
-  color: #f0f0f0;
+/* Divider */
+.divider {
+  width: 50%;
+  margin: 6rem auto;
+  border-top: 1px solid rgba(200, 181, 96, 0.3);
 }
 
+/* Hover Effekt auf Produkte */
+.product-card img {
+  transition: transform 0.5s ease;
+}
+.product-card img:hover {
+  transform: scale(1.05);
+}
 
+/* Sections leicht animiert */
+.quote-section, .about-section {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Dezent Gold Hover für Links */
+a:hover {
+  color: #c8b560;
+}
+
+/* Smooth Scroll-Effekt */
+html {
+  scroll-behavior: smooth;
+}
