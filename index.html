@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="relative bg-black text-softwhite font-sans leading-relaxed overflow-x-hidden">
-
+<body class="relative bg-black font-sans leading-relaxed overflow-x-hidden" style="color: #f0f0f0;">
 
 <!-- Custom Cursor -->
 <div class="custom-cursor" id="cursor"></div>
@@ -37,7 +36,7 @@
 <!-- Hero Section -->
 <section class="h-screen flex flex-col justify-center items-center text-center px-8">
   <h1 class="text-6xl md:text-8xl font-serif mb-6 animate-hero">Erlebe Exklusivität</h1>
-  <p class="text-xl max-w-xl animate-hero">MagnusEXC – Dein einzigartiger Luxusshop.</p>
+  <p class="text-xl max-w-xl animate-hero">MagnusEXC – Luxus definiert neu.</p>
   <button class="mt-10 px-8 py-4 border border-gold rounded-full hover:bg-gold hover:text-black transition">Jetzt Entdecken</button>
 
   <!-- Scroll Down Arrow -->
@@ -50,26 +49,65 @@
   </div>
 </section>
 
-<!-- Shop Section -->
+<!-- Trenner -->
+<div class="w-1/2 mx-auto my-16 border-t border-gray-700"></div>
+
+<!-- Produkte -->
 <section id="shop" class="min-h-screen py-32 space-y-16">
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-8">
     <!-- Produktcards -->
-    <div class="bg-black/50 backdrop-blur-md rounded-lg p-8 flex flex-col items-center text-center hover:scale-105 transform transition">
-      <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" alt="Produkt" class="mb-4 rounded-lg">
-      <h2 class="text-2xl font-semibold mb-2">Rolex Submariner</h2>
-      <p class="mb-4">Exquisite Qualität, ultimative Eleganz.</p>
-      <button class="px-6 py-3 border border-gold rounded-full hover:bg-gold hover:text-black transition">Jetzt Kaufen</button>
+    <div class="bg-black/40 backdrop-blur-md rounded-lg p-8 flex flex-col items-center text-center hover:scale-105 transform transition">
+      <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt="Rolex Submariner" class="mb-4 rounded-lg">
+      <h2 class="text-2xl font-semibold mb-2">Rolex Submariner Date</h2>
+      <p class="text-lg">12.500 €</p>
     </div>
-    <!-- weitere Produkte... -->
+    <div class="bg-black/40 backdrop-blur-md rounded-lg p-8 flex flex-col items-center text-center hover:scale-105 transform transition">
+      <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c" alt="Chanel No5" class="mb-4 rounded-lg">
+      <h2 class="text-2xl font-semibold mb-2">Chanel No.5 Parfum</h2>
+      <p class="text-lg">120 €</p>
+    </div>
+    <div class="bg-black/40 backdrop-blur-md rounded-lg p-8 flex flex-col items-center text-center hover:scale-105 transform transition">
+      <img src="https://images.unsplash.com/photo-1593032465171-8a2b21744a87" alt="Tom Ford Sonnenbrille" class="mb-4 rounded-lg">
+      <h2 class="text-2xl font-semibold mb-2">Tom Ford Sonnenbrille</h2>
+      <p class="text-lg">380 €</p>
+    </div>
+    <div class="bg-black/40 backdrop-blur-md rounded-lg p-8 flex flex-col items-center text-center hover:scale-105 transform transition">
+      <img src="https://images.unsplash.com/photo-1555529669-4b943f1cb0eb" alt="Gucci Card Holder" class="mb-4 rounded-lg">
+      <h2 class="text-2xl font-semibold mb-2">Gucci Card Holder</h2>
+      <p class="text-lg">295 €</p>
+    </div>
+    <div class="bg-black/40 backdrop-blur-md rounded-lg p-8 flex flex-col items-center text-center hover:scale-105 transform transition">
+      <img src="https://images.unsplash.com/photo-1611078489935-b7f16db6e0c7" alt="LV Horizon Koffer" class="mb-4 rounded-lg">
+      <h2 class="text-2xl font-semibold mb-2">LV Horizon 55 Koffer</h2>
+      <p class="text-lg">3.200 €</p>
+    </div>
+    <div class="bg-black/40 backdrop-blur-md rounded-lg p-8 flex flex-col items-center text-center hover:scale-105 transform transition">
+      <img src="https://images.unsplash.com/photo-1611095788045-226b6d2df855" alt="Cartier Santos" class="mb-4 rounded-lg">
+      <h2 class="text-2xl font-semibold mb-2">Cartier Santos Uhr</h2>
+      <p class="text-lg">7.800 €</p>
+    </div>
   </div>
 </section>
 
+<!-- Trenner -->
+<div class="w-1/2 mx-auto my-16 border-t border-gray-700"></div>
+
+<!-- Luxus Zitat -->
+<section class="min-h-[50vh] flex flex-col justify-center items-center text-center px-8">
+  <h2 class="text-3xl md:text-5xl font-serif italic leading-snug">"Luxus ist nicht das Gegenteil von Armut, sondern von Vulgarität."</h2>
+  <p class="mt-4 text-xl">– Coco Chanel</p>
+</section>
+
+<!-- Trenner -->
+<div class="w-1/2 mx-auto my-16 border-t border-gray-700"></div>
+
 <!-- About Section -->
-<section id="about" class="min-h-screen flex items-center justify-center px-8">
-  <div class="max-w-3xl text-center space-y-8">
-    <h2 class="text-4xl font-serif animate-about">Unsere Mission</h2>
-    <p class="text-lg animate-about">Wir schaffen nicht nur Produkte – wir schaffen Erlebnisse für die Ewigkeit.</p>
-  </div>
+<section id="about" class="min-h-screen flex flex-col justify-center items-center px-8 text-center">
+  <h2 class="text-5xl font-serif mb-8 animate-about">Unsere Vision</h2>
+  <p class="text-lg animate-about max-w-2xl">
+    MagnusEXC verkörpert die perfekte Symbiose aus Tradition, Innovation und Stil.  
+    Jede Kollektion ist ein Versprechen an unsere Kunden: Nur das Beste – für die besten Momente deines Lebens.
+  </p>
 </section>
 
 <!-- Kontakt Popup -->
